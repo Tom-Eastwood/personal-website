@@ -1,7 +1,140 @@
 @import '../../node_modules/foundation-sites/scss/foundation';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600');
+@import 'font-awesome-4.7.0/scss/font-awesome';
 
 @include foundation-grid;
+@include foundation-visibility-classes;
 
-h1{
-    font-size: 50px;
+// defining colour variables
+$blue: #1B2A41;
+$bright-blue: #99E1D9;
+$white: #FFF8F0;
+$primary-font: 'Josefin Sans', sans-serif;
+
+@mixin transition($duration) {
+    -webkit-transition: $duration;
+    -moz-transition: $duration;
+    -ms-transition: $duration;
+    -o-transition: $duration;
+    transition: $duration;
+}
+
+@mixin glow($transition) {
+    -webkit-box-shadow: $transition;
+    box-shadow: $transition;
+}
+//generic body style
+html{
+    background-color: $white;
+    color: $blue;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 300;
+
+    @media screen and (min-width: 640px) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 20px;
+    }
+
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.section{
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-btn{
+    background-color: $bright-blue;
+    color: $blue;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.1rem 4rem 0.9rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    @include transition(0.2s ease-in-out);
+    &:hover{
+        @include glow(0px 0px 25px 1px $bright-blue);
+        @include transition(0.2s ease-in-out);
+    }
+}
+
+//navigation style
+.nav{
+    padding: 1rem 0;
+    ul{
+        float: right;
+        margin-right: 3rem;
+        li{
+            list-style: none;
+            float: left;
+        }
+    }
+    a{
+        color: $blue;
+        text-decoration: none;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        padding: 0.3rem 0.5rem;
+        margin-left: 2rem;
+        border-bottom: 2px solid $white;
+        @include transition(0.2s ease-in-out);
+        &:hover{
+            text-decoration: none;
+            border-bottom: 2px solid $bright-blue;
+            @include transition(0.2s ease-in-out);
+        }
+    }
+}
+
+//header style
+.header{
+    background: $blue;
+    color: $white;
+    text-align: center;
+    padding: 7rem 0;
+    h1{
+        font-size: 5rem;
+        letter-spacing: 0.4rem;
+        margin-bottom: 1.2rem;
+        font-weight: 300;
+    }
+}
+
+//skills style
+.skills{
+    h2{
+        margin: 1.8rem 0;
+    }
+    ul{
+        li{
+            margin: 0.8rem 0;
+            text-align: left;
+        }
+    }
+}
+
+//game demo style
+.game{
+    background-color: $blue;
+    color: $white;
+}
+
+//photo style
+.photo{
+
 }
