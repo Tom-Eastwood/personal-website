@@ -1,16 +1,18 @@
 @import '../../node_modules/foundation-sites/scss/foundation';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600');
 @import 'font-awesome-4.7.0/scss/font-awesome';
+@import 'slick.scss';
 
 @include foundation-grid;
 @include foundation-visibility-classes;
 
-// defining colour variables
+// defining colour vars
 $blue: #1B2A41;
 $bright-blue: #99E1D9;
 $white: #FFF8F0;
 $primary-font: 'Josefin Sans', sans-serif;
 
+//transition vars
 @mixin transition($duration) {
     -webkit-transition: $duration;
     -moz-transition: $duration;
@@ -135,6 +137,22 @@ body{
 }
 
 //photo style
-.photo{
-
+.gallery{
+    a{
+        display: inline-block;
+        text-align: center;
+    }
+    .gal-nav{
+        position: absolute;
+        bottom: -80px;
+        &.gal-nav-left{
+            left: 45%;
+        }
+        &.gal-nav-right{
+            right: 45%;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
 }
