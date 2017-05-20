@@ -9,9 +9,31 @@ var feed = new Instafeed({
         //initialize the slider once the images are loaded
         $('#instafeed').slick({
             slidesToShow: 3,
-            prevArrow: '<i class="fa fa-caret-square-o-left fa-3x gal-nav gal-nav-left" aria-hidden="true"></i>',
-            nextArrow: '<i class="fa fa-caret-square-o-right fa-3x gal-nav gal-nav-right" aria-hidden="true"></i>',
+            prevArrow: '<div class="arrow-wrap arrow-wrap-left"><i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i></div>',
+            nextArrow: '<div class="arrow-wrap arrow-wrap-right"><i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i></div>',
+            responsive:[
+                {
+                    breakpoint: 1260,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 850,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     }
 });
 feed.run();
+
+//smooth scrolling
+$('.nav a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});

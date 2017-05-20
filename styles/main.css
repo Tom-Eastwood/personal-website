@@ -3371,6 +3371,10 @@
     .show-for-portrait {
       display: block !important; } }
 
+.inverse-color {
+  background-color: #1B2A41;
+  color: #FFF8F0; }
+
 html {
   background-color: #FFF8F0;
   color: #1B2A41;
@@ -3451,8 +3455,6 @@ body {
       transition: 0.2s ease-in-out; }
 
 .header {
-  background: #1B2A41;
-  color: #FFF8F0;
   text-align: center;
   padding: 7rem 0; }
   .header h1 {
@@ -3467,19 +3469,29 @@ body {
   margin: 0.8rem 0;
   text-align: left; }
 
-.game {
-  background-color: #1B2A41;
-  color: #FFF8F0; }
-
 .gallery a {
   display: inline-block;
   text-align: center; }
-.gallery .gal-nav {
+.gallery .arrow-wrap {
   position: absolute;
-  bottom: -80px; }
-  .gallery .gal-nav.gal-nav-left {
-    left: 45%; }
-  .gallery .gal-nav.gal-nav-right {
-    right: 45%; }
-  .gallery .gal-nav:hover {
-    cursor: pointer; }
+  height: 320px;
+  top: 0;
+  z-index: 99; }
+  .gallery .arrow-wrap.arrow-wrap-left {
+    left: 0; }
+  .gallery .arrow-wrap.arrow-wrap-right {
+    right: 0; }
+  .gallery .arrow-wrap:hover {
+    cursor: pointer;
+    background: rgba(27, 42, 65, 0.6); }
+  .gallery .arrow-wrap i {
+    position: relative;
+    top: 40%;
+    z-index: 999; }
+
+.footer {
+  text-align: left; }
+  .footer a {
+    color: #FFF8F0; }
+  .footer li {
+    margin-top: 0.5rem; }

@@ -25,6 +25,11 @@ $primary-font: 'Josefin Sans', sans-serif;
     -webkit-box-shadow: $transition;
     box-shadow: $transition;
 }
+
+.inverse-color{
+    background-color: $blue;
+    color: $white;
+}
 //generic body style
 html{
     background-color: $white;
@@ -105,8 +110,6 @@ body{
 
 //header style
 .header{
-    background: $blue;
-    color: $white;
     text-align: center;
     padding: 7rem 0;
     h1{
@@ -130,11 +133,7 @@ body{
     }
 }
 
-//game demo style
-.game{
-    background-color: $blue;
-    color: $white;
-}
+//game demo styl
 
 //photo style
 .gallery{
@@ -142,17 +141,36 @@ body{
         display: inline-block;
         text-align: center;
     }
-    .gal-nav{
-        position: absolute;
-        bottom: -80px;
-        &.gal-nav-left{
-            left: 45%;
+    .arrow-wrap{
+        position:absolute;
+        height:320px;
+        top: 0;
+        z-index: 99;
+        &.arrow-wrap-left{
+            left: 0;
         }
-        &.gal-nav-right{
-            right: 45%;
+        &.arrow-wrap-right{
+            right: 0;
         }
         &:hover{
             cursor: pointer;
+            background: rgba(27,42,65, 0.6);
         }
+        i{
+            position:relative;
+            top:40%;
+            z-index:999;
+        }
+    }
+}
+
+//footer style
+.footer{
+    text-align: left;
+    a{
+        color: $white;
+    }
+    li{
+        margin-top: 0.5rem;
     }
 }
