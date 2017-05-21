@@ -5,7 +5,7 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400");
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3379,15 +3379,15 @@ html {
   background-color: #FFF8F0;
   color: #1B2A41;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   box-sizing: border-box; }
-  @media screen and (min-width: 640px) {
+  @media screen and (max-width: 1024px) {
     html {
       font-size: 18px; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (max-width: 640px) {
     html {
-      font-size: 20px; } }
+      font-size: 16px; } }
 
 body {
   margin: 0; }
@@ -3468,6 +3468,15 @@ body {
 .skills ul li {
   margin: 0.8rem 0;
   text-align: left; }
+@media screen and (max-width: 1024px) {
+  .skills ul {
+    width: 55%;
+    margin: auto; }
+  .skills .large-4:nth-child(2), .skills .large-4:nth-child(3) {
+    margin-top: 3rem; } }
+@media screen and (max-width: 640px) {
+  .skills ul {
+    width: 70%; } }
 
 .gallery a {
   display: inline-block;
@@ -3476,14 +3485,24 @@ body {
   position: absolute;
   height: 320px;
   top: 0;
-  z-index: 99; }
+  z-index: 99;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
   .gallery .arrow-wrap.arrow-wrap-left {
     left: 0; }
   .gallery .arrow-wrap.arrow-wrap-right {
     right: 0; }
   .gallery .arrow-wrap:hover {
     cursor: pointer;
-    background: rgba(27, 42, 65, 0.6); }
+    background: rgba(27, 42, 65, 0.6);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out; }
   .gallery .arrow-wrap i {
     position: relative;
     top: 40%;
