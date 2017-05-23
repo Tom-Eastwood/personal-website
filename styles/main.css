@@ -3388,6 +3388,12 @@ html {
   @media screen and (max-width: 640px) {
     html {
       font-size: 16px; } }
+  html h3 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem; }
+  html p, html li {
+    line-height: 1.25rem;
+    letter-spacing: 0.025rem; }
 
 body {
   margin: 0; }
@@ -3398,31 +3404,6 @@ body {
 .section {
   padding: 5rem 0;
   text-align: center; }
-
-.cta-btn {
-  background-color: #99E1D9;
-  color: #1B2A41;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1.1rem 4rem 0.9rem;
-  font-size: 1.5rem;
-  display: inline-block;
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  -webkit-transition: 0.2s ease-in-out;
-  -moz-transition: 0.2s ease-in-out;
-  -ms-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out; }
-  .cta-btn:hover {
-    -webkit-box-shadow: 0px 0px 25px 1px #99E1D9;
-    box-shadow: 0px 0px 25px 1px #99E1D9;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -ms-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out; }
 
 .nav {
   padding: 1rem 0; }
@@ -3462,8 +3443,12 @@ body {
     letter-spacing: 0.4rem;
     margin-bottom: 1.2rem;
     font-weight: 300; }
+  .header h2 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 300; }
 
-.skills h2 {
+.skills h3 {
   margin: 1.8rem 0; }
 .skills ul li {
   margin: 0.8rem 0;
@@ -3477,6 +3462,9 @@ body {
 @media screen and (max-width: 640px) {
   .skills ul {
     width: 70%; } }
+
+.about p {
+  text-align: left; }
 
 .gallery a {
   display: inline-block;
@@ -3514,3 +3502,5 @@ body {
     color: #FFF8F0; }
   .footer li {
     margin-top: 0.5rem; }
+  .footer .icons a {
+    margin-right: 1rem; }

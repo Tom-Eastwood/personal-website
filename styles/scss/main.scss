@@ -44,7 +44,14 @@ html{
     @media screen and (max-width: 640px) {
         font-size: 16px;
     }
-
+    h3{
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+    p, li{
+        line-height: 1.25rem;
+        letter-spacing: 0.025rem;
+    }
     box-sizing: border-box;
 }
 
@@ -59,24 +66,6 @@ body{
 .section{
     padding: 5rem 0;
     text-align: center;
-}
-
-.cta-btn{
-    background-color: $bright-blue;
-    color: $blue;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1.1rem 4rem 0.9rem;
-    font-size: 1.5rem;
-    display: inline-block;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
-    @include transition(0.2s ease-in-out);
-    &:hover{
-        @include glow(0px 0px 25px 1px $bright-blue);
-        @include transition(0.2s ease-in-out);
-    }
 }
 
 //navigation style
@@ -117,11 +106,16 @@ body{
         margin-bottom: 1.2rem;
         font-weight: 300;
     }
+    h2{
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+    }
 }
 
 //skills style
 .skills{
-    h2{
+    h3{
         margin: 1.8rem 0;
     }
     ul{
@@ -146,8 +140,12 @@ body{
     }
 }
 
-//game demo style
-
+//about style
+.about{
+    p{
+        text-align: left;
+    }
+}
 //photo style
 .gallery{
     a{
@@ -187,5 +185,10 @@ body{
     }
     li{
         margin-top: 0.5rem;
+    }
+    .icons{
+        a{
+            margin-right: 1rem;
+        }
     }
 }
