@@ -6,10 +6,10 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     sourcemap: 'none',
-                    //style: 'compressed'
+                    style: 'compressed'
                 },
                 files: {
-                    'styles/main.css': 'styles/scss/main.scss'
+                    'styles/main.min.css': 'styles/scss/main.scss'
                 },
                 loadPath: ['node_modules/foundation-sites/scss']
             }

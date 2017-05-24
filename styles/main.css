@@ -3390,7 +3390,8 @@ html {
       font-size: 16px; } }
   html h3 {
     font-size: 1.8rem;
-    letter-spacing: 0.1rem; }
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem; }
   html p, html li {
     line-height: 1.25rem;
     letter-spacing: 0.025rem; }
